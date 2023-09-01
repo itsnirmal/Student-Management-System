@@ -19,7 +19,7 @@ public class StudentController {
 	//Handler Method to handle student list request and return model and view
 	@GetMapping("/students")
 	public String listStudent(Model model) {
-		model.addAllAttributes(studentService.getAllStudents());
+		model.addAttribute("students", studentService.getAllStudents());
 		return "students";
 	}
 	
